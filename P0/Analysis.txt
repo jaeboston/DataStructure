@@ -1,0 +1,26 @@
+NOTE: excluding the 
+
+Task0:
+O(1): just print 2 lines
+
+Task 1:
+Two for loops to iterate thru each of the rows in the two lists
+and a print statement
+O(2n) + O(1) = O(n)
+
+Task 2:
+One for loop to iterate thru each of the row in the list
+and a print statement
+O(n) + O(1) = O(n)
+
+Task 3:
+One for loop to iterate thru each of the row in the list, sorting the set and print statements
+O(n) + O(klogk) (where k is subset of n) + O(1) = O(nlogn)
+
+Task 4:
+Two for loops to iterate thru each of the rows in the two lists, sorting the set and print statements
+O(2n) + O(klogk) (where k is subset of n) + O(1) = O(nlogn)
+
+
+
+
