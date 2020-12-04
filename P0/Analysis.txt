@@ -8,19 +8,54 @@ Two for loops to iterate thru each of the rows in the two lists
 and a print statement
 O(2n) + O(1) = O(n)
 
+
+
 Task 2:
 One for loop to iterate thru each of the row in the list
 and a print statement
 O(n) + O(1) = O(n)
 
+"89071 50880 and (04546)388977 spent the longest time, 4617 seconds, on the phone during  September 2016."
+
+
 Task 3:
 One for loop to iterate thru each of the row in the list, sorting the set and print statements
 O(n) + O(klogk) (where k is subset of n) + O(1) = O(nlogn)
+
+The numbers called by people in Bangalore have codes:
+022
+040
+04344
+044
+04546
+0471
+080
+0821
+
+0.67 percent of calls from fixed lines in Bangalore are calls to other fixed lines in Bangalore.
+
+
+
 
 Task 4:
 Two for loops to iterate thru each of the rows in the two lists, sorting the set and print statements
 O(2n) + O(klogk) (where k is subset of n) + O(1) = O(nlogn)
 
-
+These numbers could be telemarketers: 
+1400481538
+1401747654
+1402316533
+1403072432
+1403579926
+1404073047
+1404368883
+1404787681
+1407539117
+1408371942
+1408409918
+1408672243
+1409421631
+1409668775
+1409994233
 
 

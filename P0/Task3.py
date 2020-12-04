@@ -48,8 +48,6 @@ The percentage should have 2 decimal digits
 fromBang = []
 toFixed = []
 toBang = []
-toMobile = []
-toTele = []
 areacode = set()
 
 for call in calls:
@@ -63,14 +61,22 @@ for call in calls:
       
       if call[1].startswith('(080)'):
         toBang.append(call)
-    if call[1].startswith('7') or call[1].startswith('8') or call[1].startswith('9'):
-      toMobile.append(call)
-    if call[1].startswith('140'):
-      toTele.append(call)
-
+    
 #: sort areacode
 sorted_areacode = sorted(areacode)
 print("The numbers called by people in Bangalore have codes:")
-print(sorted_areacode)
+print('\n'.join(sorted_areacode))
 
 print(f"{len(toBang)/len(toFixed)} percent of calls from fixed lines in Bangalore are calls to other fixed lines in Bangalore.")
+
+#The numbers called by people in Bangalore have codes:
+#022
+#040
+#04344
+#044
+#04546
+#0471
+#080
+#0821
+
+#0.67 percent of calls from fixed lines in Bangalore are calls to other fixed lines in Bangalore.

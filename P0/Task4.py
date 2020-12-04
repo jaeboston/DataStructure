@@ -52,4 +52,21 @@ for number in fromCallTele:
 sorted_fromCallTele = sorted(fromCallTele) 
 
 print(f"These numbers could be telemarketers: ")
-print(sorted_fromCallTele)
+print('\n'.join(sorted_fromCallTele))
+
+#These numbers could be telemarketers: 
+#1400481538
+#1401747654
+#1402316533
+#1403072432
+#1403579926
+#1404073047
+#1404368883
+#1404787681
+#1407539117
+#1408371942
+#1408409918
+#1408672243
+#1409421631
+#1409668775
+#1409994233
