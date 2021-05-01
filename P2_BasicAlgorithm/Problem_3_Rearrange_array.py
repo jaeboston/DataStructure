@@ -66,8 +66,8 @@ def test_function(test_case):
         print("Fail")
 
 
-#print(quick_sort([5, 2, 3, 4, 1], 0, 4))
-#print(quick_sort([4, 6, 2, 5, 9, 8], 0, 5))
-
 test_function([[1, 2, 3, 4, 5], [542, 31]])
 test_function([[4, 6, 2, 5, 9, 8], [964, 852]])
+#: edge case
+test_function([[4, 4, 4, 4, 4, 4], [444, 444]])
+test_function([[9, 2, 0, 0, 1, 1], [910, 210]])

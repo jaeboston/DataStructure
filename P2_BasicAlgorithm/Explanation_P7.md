@@ -29,3 +29,13 @@ The RouteTrie is a class that forms a Trie. It uses the RouteTrieNode class to m
 The find method takes route_list as an input parameter. It finds the route elements in the route_list and returns the hander for the last route element in the route_list. If any of the route elements in route_list is not found, then None is returned.
 
 Last we implement the actual Router class. It will initialize itself with a RouteTrie for holding routes and associated handlers. It should also support adding a handler by the path and looking up a handler by the path. All of these operations will be delegated to the RouteTrie (insert, and find). The Router class has a method called, split_path which takes a path and creates a list of route elements. When calling the RouteTrie's insert and find methods, the split_path method will be called first to make route_list input arguments for those two methods.
+
+The time complexity by functions: 
+* the find() function in the RouteTrie class would be O(n) where n is the number of routes.The looup in dictionary would be O(1) but to check the existance of key would be O(n) where m is the number of nodes in the root children
+
+* the insert() function in the Trie class would be O(n) where n is the number of routes
+
+
+The space complexity of the Trie would be O(n*m) n is the number of nodes and m is number of items in its nodes' children dictionary.
+
+

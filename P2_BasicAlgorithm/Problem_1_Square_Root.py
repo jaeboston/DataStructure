@@ -7,7 +7,13 @@ def sqrt(number):
     Returns:
        int: Floored Square Root
     """
-    ceiling_flag = False
+
+    #: egde case
+    if number == None:
+        return None
+
+
+    ceiling_flag = False #: to handle edge cases when first sq value is 1
     root = number//2
     sq = root**2
     if  sq == number:
@@ -34,3 +40,4 @@ print ("Pass" if  (0 == sqrt(0)) else "Fail")
 print ("Pass" if  (4 == sqrt(16)) else "Fail")
 print ("Pass" if  (1 == sqrt(1)) else "Fail")
 print ("Pass" if  (5 == sqrt(27)) else "Fail")
+print ("Pass" if  (None == sqrt(None)) else "Fail")

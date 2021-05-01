@@ -7,6 +7,10 @@ we will look for smallest and largest integer from a list of unsorted integers.
 
 # Algorithm 
 
-We comapre the first two elements input array and assign them as min_val and max_val variables.
-Starting the thrid element, compare it to the min_val and max_val and replace those variables accordingly.
-Return min_val, max_val as a Tuple.
+We create two variables `min_val`,`max_val` to hold min and max val. Then we initilize these variables with the first value in the input array.
+Then, we simply iterate thru each item in the input array.
+If we find a value that is smaller than `min_val`, update `min_val`.
+If we find a value that is larger than `max_val`, update `max_val`.
+After the iteration, we can return two variables as Tuple.
+
+The time complexity of this algorithm would be O(N). The space complexity would be O(1)

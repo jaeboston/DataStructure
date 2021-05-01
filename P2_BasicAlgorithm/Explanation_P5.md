@@ -7,10 +7,20 @@ we need to add the ability to list suffixes to implement our autocomplete featur
 
 # Algorithm 
 
-The suffixes() function in TriNode need a helper function which is called recurssively as we traverse down the Trie. We can pass a list variable into this helper function to collect suffixes.
+The suffixes() function in TriNode would use a helper function which is called recurssively as it traverses down the Trie. We can pass a list variable into this helper function to collect suffixes.
 
-The helper function has a base case when the children property of its TrieNode is empty. It returns the list variable.
 
-In every recursion, it checks is_word property and if the property is set to True then we append the suffixes to the list variable.
+The helper function will add suffixes to the list variable if it finds the is_word property is set to True. The function recurssively traverse all the nodes in the Trie until the children property of its TrieNode is empty. We need to use the backtracking technique to collect proper suffixes.
 
+At the end, we rereturn the list that contains all the suffixes.
+
+The time complexity by functions: 
+* the find() function in the Trie class would be O(m).The looup in dictionary would be O(1) but to check the existance of key would be O(m) where m is the number of nodes in the root children
+
+* the insert() function in the Trie class would be O(n) where n is the number of characters
+
+* the suffix() funciton in the TrieNode class woulbe be O(n*m) where n is the number of nodes it nees to visit and m is the number of children nodes in each of the n nodes.
+
+
+The space complexity of the Trie would be O(n*m) n is the number of nodes and m is number of items in its nodes' children dictionary.
 
