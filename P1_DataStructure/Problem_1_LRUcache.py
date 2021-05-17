@@ -1,17 +1,21 @@
-#Least Recently Used (LRU) cache. An LRU cache is a type of cache in which we remove the least recently used entry when the cache memory reaches its limit. 
+# Least Recently Used (LRU) cache. 
+# An LRU cache is a type of cache in which we remove 
+# the least recently used entry when the cache memory reaches its limit. 
 # For the current problem, consider both get and set operations as an use operation.
 
-#Your job is to use an appropriate data structure(s) to implement the cache.
+# Your job is to use an appropriate data structure(s) to implement the cache.
 
-#In case of a cache hit, your get() operation should return the appropriate value.
-#In case of a cache miss, your get() should return -1.
-#While putting an element in the cache, your put() / set() operation must insert the element. 
-#If the cache is full, you must write code that removes the least recently used entry first and then insert the element.
-#All operations must take O(1) time.
+# In case of a cache hit, your get() operation should return the appropriate value.
+# In case of a cache miss, your get() should return -1.
+# While putting an element in the cache, your put() / set() operation must insert the element. 
+# If the cache is full, you must write code that removes the least recently used 
+# entry first and then insert the element.
+# All operations must take O(1) time.
 
-#For the current problem, you can consider the size of cache = 5.
+# For the current problem, you can consider the size of cache = 5.
 
-#Here is some boiler plate code and some example test cases to get you started on this problem:
+# Here is some boiler plate code and some example test cases 
+# to get you started on this problem:
 
 class Node(object):
 

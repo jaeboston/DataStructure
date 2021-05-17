@@ -12,38 +12,41 @@ def find_files(suffix, path):
     """
     Find all files beneath path with file name suffix.
 
-    Note that a path may contain further subdirectories and those
-    subdirectories may also contain further subdirectries.
+    Note that a path may contain further subdirectories
+    and those subdirectories may also contain further subdirectories.
 
-    There are no limit to the depth of the subdirectories can be
+    There are no limit to the depth of the subdirectories can be.
 
     Args:
-        suffix(str): suffix if the file name ot be found
-        path(str): path of the file system
+      suffix(str): suffix if the file name to be found
+      path(str): path of the file system
 
     Returns:
-        a list of paths
+       a list of paths
     """
+    output = []
+    helper(suffix, path, output)
+    return output
 
-    obj_list = os.listdir(path)
-    
-    if len(obj_list) == 0:
-        return
+def helper(suffix, path, output):
 
-    for obj in obj_list:
-        if os.path.isdir(path + '/' + obj):
-            find_files(suffix, path + '/' + obj)
+    if os.path.isfile(path):
+        if path.endswith(suffix):
+            output.append(path)
+            return
+    else: 
+        obj_list = os.listdir(path)
 
-        else:
-            if obj.endswith(suffix):
-                print(path + '/' + obj)
+        for obj in obj_list:
+            new_path = path + '/' + obj
+            helper(suffix, new_path, output)
 
-    return
 
 #: TEST CASES
 
-find_files('.c', './P1_DataStructure')
+print(find_files('.c', './P1_DataStructure'))
 
-find_files('.d', './P1_DataStructure')
+print(find_files('.d', './P1_DataStructure'))
 
-find_files('.cd', './P1_DataStructure')
+print(find_files('.cd', './P1_DataStructure'))
+
