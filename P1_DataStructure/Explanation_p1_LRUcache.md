@@ -8,3 +8,4 @@ If it is at its full capacity, we can simply delete the tail key, add the pair t
 All of the above steps takes O(1). Dictionary can add a key,value pair in O(1) operation.
 LinkedList can add and remove a node in O(1) operation as well.
 
+The space complexity would be O(N) where N is the the capacity.
