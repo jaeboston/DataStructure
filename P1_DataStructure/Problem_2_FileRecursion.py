@@ -50,3 +50,4 @@ print(find_files('.d', './P1_DataStructure'))
 
 print(find_files('.cd', './P1_DataStructure'))
 
+print(find_files('.c', './'))

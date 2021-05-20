@@ -4,3 +4,5 @@ The time complexity would be O(1) constant time.
 
 Then, we implement a class `Blockchain`. It has a root node for a linked list. It uses `append` function to create a `Block` object and link to the previous object. 
 The time complexity of the `append` function would be O(N) where N is the number of `Block` objects. 
+
+The space complexity would be O(N) where N is the number of Block objects.

@@ -43,6 +43,10 @@ def dfs_traverse(node, path, output):
 #:===============================================
 def huffman_encoding_with_heap(data):
 
+  #: check the data is empty
+  if len(data) == 0:
+    return '', None
+
   #1: get the freq for each char
   freq_dict = {}
 
@@ -56,6 +60,14 @@ def huffman_encoding_with_heap(data):
   for char, freq in freq_dict.items():
     heapq.heappush(min_heap, (freq, char))
 
+  #: edge case : only one char.
+  if len(min_heap) < 2:
+    one = heapq.heappop(min_heap)
+    node = TreeNode('', one[0]) #: TreeNode(char, freq)
+    node.left = TreeNode(one[1], one[0])
+    node.right = TreeNode(one[1], one[0])
+    heapq.heappush(min_heap, (node.freq, node))
+    
   #3: build the Huffman tree
   while len(min_heap) >= 2:
     #: pop the two lowest freq (the freq. values are in tuple)
@@ -116,17 +128,17 @@ def huffman_decoding(data,tree):
 #: TEST
 #:===============================================
 #: CASE 1
-#code1, tree1 = huffman_encoding_with_heap('AAAAAAABBBCCCCCCCDDEEEEEE')
-#print(code1)
-#original1 = huffman_decoding(code1, tree1)
-#print(original1)
+code1, tree1 = huffman_encoding_with_heap('AAAAAAABBBCCCCCCCDDEEEEEE')
+print(code1)
+original1 = huffman_decoding(code1, tree1)
+print(original1)
 
-#: CASE 2
-code, treenode = huffman_encoding_with_heap('AAAAAAA')
-print(code)
-original = huffman_decoding(code, treenode)
-print(original)
+#: CASE 2: edge case only 1 char
+code2, treenode2 = huffman_encoding_with_heap('AAAAAAA')
+print(code2)
+original2 = huffman_decoding(code2, treenode2)
+print(original2)
 
-#: CASE 3
-#code, treenode = huffman_encoding_with_heap('')
-#print(code)
+#: CASE 3 : edge case no char
+code3, treenode3 = huffman_encoding_with_heap('')
+print(code3)

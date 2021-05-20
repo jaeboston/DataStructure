@@ -43,9 +43,11 @@ coinBlockchain = Blockchain()
 coinBlockchain.append('1stBLock')
 coinBlockchain.append('2ndBLock')
 coinBlockchain.append('3rdBLock')
+coinBlockchain.append('')
+
 
 print(coinBlockchain.head.hash)
-print(coinBlockchain.head.data)
+print(coinBlockchain.head.data)#: this is the block with no data
 
 print(coinBlockchain.head.previous_block.hash)
 print(coinBlockchain.head.previous_block.data)
@@ -53,6 +55,8 @@ print(coinBlockchain.head.previous_block.data)
 print(coinBlockchain.head.previous_block.previous_block.hash)
 print(coinBlockchain.head.previous_block.previous_block.data)
 
+print(coinBlockchain.head.previous_block.previous_block.previous_block.hash)
+print(coinBlockchain.head.previous_block.previous_block.previous_block.data)
 
 
 

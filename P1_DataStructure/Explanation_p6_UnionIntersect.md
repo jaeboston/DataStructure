@@ -5,3 +5,5 @@ The time complexity of the `intersection` function would be O(N*M) where the N i
 The `union` function will create a two `sets`. Then it uses the `union` function in the `set` class. Once we have a new `set` object with union of the two `sets`, it iterate thru each item in the new `set` and create a new `linked list`.
 
 The time complexity of the function would be O(N) where N is the sum of items in the two sets.
+
+The space complexity would be O(N) where N is the number of items in both of the linked lists.

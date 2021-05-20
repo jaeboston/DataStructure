@@ -25,6 +25,8 @@ child = Group("child")
 sub_child = Group("subchild")
 
 sub_child_user = "sub_child_user"
+child_user = "child_user"
+child.add_user(child_user)
 sub_child.add_user(sub_child_user)
 
 child.add_group(sub_child)
@@ -56,6 +58,10 @@ def is_user_in_group(user, group):
 
 #: Test functions
 #     
-print(is_user_in_group("sub_child_user", parent))
-print(is_user_in_group("other_child_user", parent))
-print(is_user_in_group("", parent))
+print(is_user_in_group("sub_child_user", parent)) #: True
+print(is_user_in_group("child_user", parent)) #: True
+
+print(is_user_in_group("other_child_user", parent)) #: False
+print(is_user_in_group("", parent)) #: edge case testing False
+print(is_user_in_group("child", parent)) #: False
+

@@ -27,3 +27,5 @@ This process will take O(N) time complexity, where N is each character in the en
 
 Therefore in terms of the time complexity.
 The decoding process will take O(N).
+
+The space complexity would be O(N) where N is the number of unique characters.

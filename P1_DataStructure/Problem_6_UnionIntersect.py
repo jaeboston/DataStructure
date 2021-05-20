@@ -148,7 +148,7 @@ print (union(linked_list_3,linked_list_4))
 print (intersection(linked_list_3,linked_list_4))
 
 
-# Test case 3
+# Test case 3: edge case
 
 linked_list_5 = LinkedList()
 linked_list_6 = LinkedList()
