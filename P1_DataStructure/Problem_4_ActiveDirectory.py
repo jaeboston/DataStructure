@@ -64,4 +64,3 @@ print(is_user_in_group("child_user", parent)) #: True
 print(is_user_in_group("other_child_user", parent)) #: False
 print(is_user_in_group("", parent)) #: edge case testing False
 print(is_user_in_group("child", parent)) #: False
-

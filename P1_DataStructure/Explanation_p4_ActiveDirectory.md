@@ -4,8 +4,3 @@ In each iteration, we call the `is_user_in_group` function passing in the `usern
 The complexity would be O(N*M) where N is the number of all sub groups and M is the maximum number of `usernames` in all sub gruops.
  
 The space complexity would be O(N) where N is all objects including groups and users.
- 
-
-
-
-

@@ -28,7 +28,7 @@ class Node(object):
 
 class LRU_Cache(object):
 
-    def __init__(self, capacity):
+    def __init__(self, capacity=10):
         # Initialize class variables
         self.MAX_LEN = capacity
 
@@ -133,7 +133,7 @@ class LRU_Cache(object):
 
 #: TEST CASES
 
-#: init    
+#: Init with 5    
 our_cache = LRU_Cache(5)
 
 our_cache.set(1, 1)
@@ -157,3 +157,18 @@ print(our_cache.get(5))      # returns 5 : 5 is at the tail
 
 
 
+#: init with NULL (use default size)
+our_cache = LRU_Cache()
+
+our_cache.set(1, 1)
+our_cache.set(2, 2)
+our_cache.set(3, 3)
+our_cache.set(4, 4)
+
+print(our_cache.get(1))      #: returns 1
+print(our_cache.get(2))      #: returns 2
+print(our_cache.get(9))      #: returns -1 because 9 is not present in the cache
+
+
+#: init with 0
+our_cache = LRU_Cache(0)

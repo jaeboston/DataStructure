@@ -34,13 +34,15 @@ def helper(suffix, path, output):
         if path.endswith(suffix):
             output.append(path)
             return
-    else: 
-        obj_list = os.listdir(path)
+    else:
+        if os.path.isdir(path):
+            obj_list = os.listdir(path)
 
-        for obj in obj_list:
-            new_path = path + '/' + obj
-            helper(suffix, new_path, output)
-
+            for obj in obj_list:
+                new_path = path + '/' + obj
+                helper(suffix, new_path, output)
+        else: #: no such path
+            return
 
 #: TEST CASES
 
@@ -50,4 +52,6 @@ print(find_files('.d', './P1_DataStructure'))
 
 print(find_files('.cd', './P1_DataStructure'))
 
-print(find_files('.c', './'))
+print(find_files('.c', './P3')) #: edge case with invalid path
+
+print(find_files('.c', '')) #: edge case
